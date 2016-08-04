@@ -10,11 +10,16 @@ using System.Windows.Forms;
 
 namespace COMP123_Assignment_6_BMI
 {
-    public partial class Form1 : Form
+    public partial class BMICalculator : Form
     {
-        public Form1()
+        public BMICalculator()
         {
             InitializeComponent();
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

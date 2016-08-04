@@ -16,7 +16,7 @@ namespace COMP123_Assignment_6_BMI
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Form1());
+            Application.Run(new BMICalculator());
         }
     }
 }
