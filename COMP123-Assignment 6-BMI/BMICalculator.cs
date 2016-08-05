@@ -12,7 +12,7 @@ using System.Windows.Forms;
  * Student # : 300432364
  * Date : August, 4th, 2016
  * Description : Main program for BMI Calculator App
- * Version : 0.0.4 : Final Commit - Updated progress bar and documentations
+ * Version : 0.0.5 : Final Commit - Updated UI
  */
 namespace COMP123_Assignment_6_BMI
 {

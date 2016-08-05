@@ -66,9 +66,9 @@
             // 
             this.ImperialButton.Location = new System.Drawing.Point(3, 3);
             this.ImperialButton.Name = "ImperialButton";
-            this.ImperialButton.Size = new System.Drawing.Size(100, 28);
+            this.ImperialButton.Size = new System.Drawing.Size(139, 28);
             this.ImperialButton.TabIndex = 0;
-            this.ImperialButton.Text = "Imperial";
+            this.ImperialButton.Text = "Imperial (in/lb)";
             // 
             // tableLayoutPanel1
             // 
@@ -77,21 +77,21 @@
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 134F));
             this.tableLayoutPanel1.Controls.Add(this.MetricUnitsButton, 1, 0);
             this.tableLayoutPanel1.Controls.Add(this.ImperialButton, 0, 0);
-            this.tableLayoutPanel1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tableLayoutPanel1.Location = new System.Drawing.Point(37, 43);
+            this.tableLayoutPanel1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(13, 43);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 1;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 52.94118F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(240, 34);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(279, 34);
             this.tableLayoutPanel1.TabIndex = 4;
             // 
             // MetricUnitsButton
             // 
-            this.MetricUnitsButton.Location = new System.Drawing.Point(109, 3);
+            this.MetricUnitsButton.Location = new System.Drawing.Point(148, 3);
             this.MetricUnitsButton.Name = "MetricUnitsButton";
             this.MetricUnitsButton.Size = new System.Drawing.Size(128, 28);
             this.MetricUnitsButton.TabIndex = 1;
-            this.MetricUnitsButton.Text = "Metric units";
+            this.MetricUnitsButton.Text = "Metric (cm/kg)";
             // 
             // tableLayoutPanel2
             // 
@@ -244,23 +244,25 @@
             // CalculateButton
             // 
             this.CalculateButton.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.CalculateButton.BackColor = System.Drawing.Color.Bisque;
             this.CalculateButton.Location = new System.Drawing.Point(14, 9);
             this.CalculateButton.Name = "CalculateButton";
             this.CalculateButton.Size = new System.Drawing.Size(110, 40);
             this.CalculateButton.TabIndex = 0;
             this.CalculateButton.Text = "Calculate";
-            this.CalculateButton.UseVisualStyleBackColor = true;
+            this.CalculateButton.UseVisualStyleBackColor = false;
             this.CalculateButton.Click += new System.EventHandler(this.CalculateButton_Click);
             // 
             // ClearButton
             // 
             this.ClearButton.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.ClearButton.BackColor = System.Drawing.Color.Bisque;
             this.ClearButton.Location = new System.Drawing.Point(154, 9);
             this.ClearButton.Name = "ClearButton";
             this.ClearButton.Size = new System.Drawing.Size(110, 40);
             this.ClearButton.TabIndex = 1;
             this.ClearButton.Text = "Clear";
-            this.ClearButton.UseVisualStyleBackColor = true;
+            this.ClearButton.UseVisualStyleBackColor = false;
             this.ClearButton.Click += new System.EventHandler(this.ClearButton_Click);
             // 
             // BMICalculator
