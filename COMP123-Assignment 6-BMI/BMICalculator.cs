@@ -12,7 +12,7 @@ using System.Windows.Forms;
  * Student # : 300432364
  * Date : August, 4th, 2016
  * Description : Main program for BMI Calculator App
- * Version : 0.0.2 : Added UI controls to the app with input restriction
+ * Version : 0.0.3 : Final Commit - Added progress bar
  */
 namespace COMP123_Assignment_6_BMI
 {
@@ -52,6 +52,7 @@ namespace COMP123_Assignment_6_BMI
             BMIResultBox.BackColor = Color.Bisque;
             BMIScaleBox.Text = "";
             BMIScaleBox.BackColor = Color.Bisque;
+            BMIProgressBar.Value = 0;
         }
 
         /**
@@ -95,6 +96,14 @@ namespace COMP123_Assignment_6_BMI
                 {
                     // calculate BMI in imperial
                     BMI = (weight * 703) / (height * height);
+                    if (((BMI / 30) * 100) > 100)
+                    {
+                        BMIProgressBar.Value = 100;
+                    }
+                    else
+                    {
+                        BMIProgressBar.Value = ((int)((BMI / 30) * 100));
+                    }
                     BMIResultBox.Text = string.Format("{0:f1}",BMI);
                     BMIResultBox.BackColor = Color.LightSalmon;
                     BMIScaleBox.BackColor = Color.LightSalmon;
@@ -103,25 +112,35 @@ namespace COMP123_Assignment_6_BMI
                     if (BMI < 18.5)
                     {
                         this.BMIScaleBox.Text = ("Underweight");
-                        
+                        BMIProgressBar.ForeColor = Color.Yellow;
                     }
                     else if (BMI >= 18.5 && BMI <= 24.9)
                     {
                         this.BMIScaleBox.Text = ("Normal");
+                        BMIProgressBar.ForeColor = Color.Green;
                     }
                     else if (BMI >= 25 && BMI <= 29.9)
                     {
                         this.BMIScaleBox.Text = ("Overweight");
+                        BMIProgressBar.ForeColor = Color.DarkGreen;
                     }
                     else if (BMI >= 30)
                     {
                         this.BMIScaleBox.Text = ("Obese");
+                        BMIProgressBar.ForeColor = Color.Red;
                     }
                 }
                 // in case the input is in metric units
                 else if (MetricUnitsButton.Checked == true)
                 {
                     BMI = weight /((height * height)/10000);
+                    if (((BMI / 30) * 100) > 100)
+                    {
+                        BMIProgressBar.Value = 100;
+                    }
+                    else {
+                        BMIProgressBar.Value = ((int)((BMI / 30) * 100));
+                    }
                     BMIResultBox.Text = string.Format("{0:f1}", BMI);
                     BMIResultBox.BackColor = Color.LightSalmon;
                     BMIScaleBox.BackColor = Color.LightSalmon;
@@ -131,19 +150,22 @@ namespace COMP123_Assignment_6_BMI
                     if (BMI < 18.5)
                     {
                         this.BMIScaleBox.Text = ("Underweight");
-
+                        BMIProgressBar.ForeColor = Color.Yellow;
                     }
                     else if (BMI >= 18.5 && BMI <= 24.9)
                     {
                         this.BMIScaleBox.Text = ("Normal");
+                        BMIProgressBar.ForeColor = Color.Green;
                     }
                     else if (BMI >= 25 && BMI <= 29.9)
                     {
                         this.BMIScaleBox.Text = ("Overweight");
+                        BMIProgressBar.ForeColor = Color.DarkGreen;
                     }
                     else if (BMI >= 30)
                     {
                         this.BMIScaleBox.Text = ("Obese");
+                        BMIProgressBar.ForeColor = Color.Red;
                     }
                 }
             }

@@ -218,9 +218,11 @@
             // 
             // BMIProgressBar
             // 
-            this.BMIProgressBar.Location = new System.Drawing.Point(3, 137);
+            this.BMIProgressBar.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.BMIProgressBar.ForeColor = System.Drawing.SystemColors.HighlightText;
+            this.BMIProgressBar.Location = new System.Drawing.Point(9, 147);
             this.BMIProgressBar.Name = "BMIProgressBar";
-            this.BMIProgressBar.Size = new System.Drawing.Size(100, 23);
+            this.BMIProgressBar.Size = new System.Drawing.Size(261, 23);
             this.BMIProgressBar.TabIndex = 3;
             // 
             // tableLayoutPanel4
