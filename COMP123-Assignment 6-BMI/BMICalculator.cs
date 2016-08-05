@@ -12,7 +12,7 @@ using System.Windows.Forms;
  * Student # : 300432364
  * Date : August, 4th, 2016
  * Description : Main program for BMI Calculator App
- * Version : 0.0.3 : Final Commit - Added progress bar
+ * Version : 0.0.4 : Final Commit - Updated progress bar and documentations
  */
 namespace COMP123_Assignment_6_BMI
 {
@@ -96,6 +96,8 @@ namespace COMP123_Assignment_6_BMI
                 {
                     // calculate BMI in imperial
                     BMI = (weight * 703) / (height * height);
+
+                    // condition to set progress bar value
                     if (((BMI / 30) * 100) > 100)
                     {
                         BMIProgressBar.Value = 100;
@@ -104,6 +106,7 @@ namespace COMP123_Assignment_6_BMI
                     {
                         BMIProgressBar.Value = ((int)((BMI / 30) * 100));
                     }
+
                     BMIResultBox.Text = string.Format("{0:f1}",BMI);
                     BMIResultBox.BackColor = Color.LightSalmon;
                     BMIScaleBox.BackColor = Color.LightSalmon;
@@ -133,7 +136,10 @@ namespace COMP123_Assignment_6_BMI
                 // in case the input is in metric units
                 else if (MetricUnitsButton.Checked == true)
                 {
+                    // calculate BMI in metric units
                     BMI = weight /((height * height)/10000);
+                    
+                    // condition to set progress bar value
                     if (((BMI / 30) * 100) > 100)
                     {
                         BMIProgressBar.Value = 100;
@@ -141,6 +147,7 @@ namespace COMP123_Assignment_6_BMI
                     else {
                         BMIProgressBar.Value = ((int)((BMI / 30) * 100));
                     }
+
                     BMIResultBox.Text = string.Format("{0:f1}", BMI);
                     BMIResultBox.BackColor = Color.LightSalmon;
                     BMIScaleBox.BackColor = Color.LightSalmon;
@@ -176,6 +183,15 @@ namespace COMP123_Assignment_6_BMI
 
         }
 
+        /**
+         * <summary>
+         * This key press eventhandler set a restriction on input height value
+         * </summary>
+         * 
+         * @method HeightTextBox_KeyPress
+         * @param {object} sender
+         * @param {KeyPressEventArgs} e
+         */
         private void HeightTextBox_KeyPress(object sender, KeyPressEventArgs e)
         {
             char ch = e.KeyChar;
@@ -185,6 +201,15 @@ namespace COMP123_Assignment_6_BMI
             }
         }
 
+        /**
+         * <summary>
+         * This key press eventhandler set a restriction on input weight value
+         * </summary>
+         * 
+         * @method WeightTextBox_KeyPress
+         * @param {object} sender
+         * @param {KeyPressEventArgs} e
+         */
         private void WeightTextBox_KeyPress(object sender, KeyPressEventArgs e)
         {
             char ch = e.KeyChar;

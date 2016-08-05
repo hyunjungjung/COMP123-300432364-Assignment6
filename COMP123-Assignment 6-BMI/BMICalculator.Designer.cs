@@ -223,6 +223,7 @@
             this.BMIProgressBar.Location = new System.Drawing.Point(9, 147);
             this.BMIProgressBar.Name = "BMIProgressBar";
             this.BMIProgressBar.Size = new System.Drawing.Size(261, 23);
+            this.BMIProgressBar.Style = System.Windows.Forms.ProgressBarStyle.Continuous;
             this.BMIProgressBar.TabIndex = 3;
             // 
             // tableLayoutPanel4
